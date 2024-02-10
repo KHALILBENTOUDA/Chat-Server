@@ -1,0 +1,6 @@
+--
+-- Indexes for table `Chat`
+--
+ALTER TABLE `Chat`
+  ADD PRIMARY KEY (`chat_id`),
+  ADD UNIQUE KEY `members` (`members`) USING HASH;
