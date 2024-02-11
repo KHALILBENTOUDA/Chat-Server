@@ -49,7 +49,7 @@ const register = AsyncHandler(async (req, res, next) => {
             if (tokenInsertError) return next(new AppErrorClass(500, 'Error inserting verification token', statusText.ERROR));
             
             // Send verification email
-            const link = `${req.protocol}://localhost:5173/user/${user_id}/verify/${verificationToken}`;
+            const link = `https://matcha-avzq.onrender.com/user/${user_id}/verify/${verificationToken}`;
             
 
             // //
@@ -169,7 +169,7 @@ const login = AsyncHandler(async (req, res, next) => {
                           return next( new AppErrorClass(401,'Error inserting verification toke',statusText.FAIL))   
                         }
                         try{
-                          const link =`${req.protocol}://localhost:5173/user/${user.id}/verify/${verificationToken}`
+                          const link =`https://matcha-avzq.onrender.com/user/${user.id}/verify/${verificationToken}`
                               await sendVerifyEmail(
                                     {
                                           email:user.email,
