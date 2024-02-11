@@ -83,7 +83,7 @@ app.use('/api/v1/message',MessageRoutes)
 app.use('/api/v1/view',ViewRoutes)
 app.use('/api/v1/Emages',EmagesRoutes)
 app.use('/api/v1/notification',notificationRoute)
-app.use('/uploads',express.static(path.join(__dirname, 'uploads')))
+app.use('/uploads',express.static(path.join(__dirname, 'Uploads')))
 
 // Routes not found 
 app.all('*',(req,res,next)=>{
