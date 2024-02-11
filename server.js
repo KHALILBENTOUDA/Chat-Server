@@ -6,7 +6,7 @@ const path = require("node:path");
 const cors = require("cors");
 const io = require('socket.io')(8800, {
     cors: {
-      origin: "https://matcha-v.netlify.app/",
+      origin: "https://matcha-avzq.onrender.com",
     }
   });
   
@@ -64,7 +64,7 @@ io.on("connection", (socket) => {
 
 // Middleware setup
 app.use(cors({
-  origin:['http://localhost:5173'],
+  origin:['https://matcha-avzq.onrender.com'],
   credentials:true
 }));  
 app.use(express.json());
